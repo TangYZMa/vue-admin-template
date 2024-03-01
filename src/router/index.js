@@ -91,6 +91,19 @@ export const constantRoutes = [
   },
 
   {
+    path: '/test',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Test',
+        component: () => import('@/views/jctest/index'),
+        meta: { title: 'Test', icon: 'form' }
+      }
+    ]
+  },
+
+  {
     path: '/nested',
     component: Layout,
     redirect: '/nested/menu1',
